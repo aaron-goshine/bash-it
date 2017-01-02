@@ -2,11 +2,7 @@ cite 'about-alias'
 about-alias 'osx-specific aliases'
 
 # Desktop Programs
-alias fireworks="open -a '/Applications/Adobe Fireworks CS3/Adobe Fireworks CS3.app'"
-alias photoshop="open -a '/Applications/Adobe Photoshop CS3/Adobe Photoshop.app'"
 alias preview="open -a '$PREVIEW'"
-alias xcode="open -a '/Applications/XCode.app'"
-alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
 alias chrome="open -a google\ chrome"
@@ -15,17 +11,10 @@ alias dashcode="open -a dashcode"
 alias f='open -a Finder '
 alias fh='open -a Finder .'
 alias textedit='open -a TextEdit'
-alias hex='open -a "Hex Fiend"'
-alias skype='open -a Skype'
-alias mou='open -a Mou'
-alias subl='open -a Sublime\ Text --args'
 
 if [ -s /usr/bin/firefox ] ; then
   unalias firefox
 fi
-
-# Requires growlnotify, which can be found in the Growl DMG under "Extras"
-alias grnot='growlnotify -s -t Terminal -m "Done"'
 
 # Get rid of those pesky .DS_Store files recursively
 alias dsclean='find . -type f -name .DS_Store -delete'

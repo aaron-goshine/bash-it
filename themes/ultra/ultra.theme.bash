@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
 
-SCM_THEME_PROMPT_DIRTY="${yellow}[✷]"
-SCM_THEME_PROMPT_CLEAN=" ${bold_green}*(⦿)"
-SCM_THEME_PROMPT_PREFIX=" |"
-SCM_THEME_PROMPT_SUFFIX="${green}|"
+SCM_THEME_PROMPT_DIRTY="${yellow}[✷]${reset_color}"
+SCM_THEME_PROMPT_CLEAN="${bold_green}(⦿)${reset_color}"
+SCM_THEME_PROMPT_PREFIX="${reset_color}|${bold_green}"
+SCM_THEME_PROMPT_SUFFIX="${reset_color}|"
 
-GIT_THEME_PROMPT_DIRTY="${yellow}[✷]"
-GIT_THEME_PROMPT_CLEAN="${bold_green}(⦿)"
-GIT_THEME_PROMPT_PREFIX=" ${green}|"
-GIT_THEME_PROMPT_SUFFIX="${green}|"
+GIT_THEME_PROMPT_DIRTY="${yellow}[✷]${reset_color}"
+GIT_THEME_PROMPT_CLEAN="${bold_green}(⦿)${reset_color}"
+GIT_THEME_PROMPT_PREFIX="${reset_color}|${bold_green}"
+GIT_THEME_PROMPT_SUFFIX="${reset_color}|"
 
-RVM_THEME_PROMPT_PREFIX="|"
-RVM_THEME_PROMPT_SUFFIX="|"
- 
 function prompt_command() {
-  PS1="${gray}(⦿)[${blue}\h${reset_color}]-[${blue}\w${reset_color}] ${bold_cyan}$(scm_char)${green}$(scm_prompt_info) ${green}➜ ${reset_color} "
+  PS1="${blue}(⦿)${reset_color}[\h]-[\w] $(scm_char) ${green}$(scm_prompt_info) ${green}➜ ${reset_color} "
 }
 
 THEME_SHOW_CLOCK_CHAR=${THEME_SHOW_CLOCK_CHAR:-"true"}
